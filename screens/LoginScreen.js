@@ -6,6 +6,8 @@ import{
     View, 
     Text,
     StyleSheet,
+    Image,
+    ImageBackground
 } from 'react-native';
 var UserContoller = require('../controller/UserController.js');
 export default class LoginScreen extends React.Component{
@@ -30,7 +32,15 @@ export default class LoginScreen extends React.Component{
     renderCurrentState(){
         
         return( 
+        <ImageBackground 
+        style={styles.container}
+        source={require('../img/internet.jpg')}    
+        >
           <View style = {styles.form}>
+          <Image 
+          style = {styles.logo}
+          source={require('../img/spoone.png')}
+          />   
             <Input
               placeholder='Enter your Email...'
               label='Email'
@@ -45,6 +55,8 @@ export default class LoginScreen extends React.Component{
             <Button onPress= {() => this.onPressSignIN()}>Log In</Button>
             <Button onPress= {() =>this.props.navigation.navigate('SignUp')}>Sign UP</Button>
           </View>
+          </ImageBackground>
+
         )
     }
 
@@ -70,5 +82,18 @@ const styles = StyleSheet.create({
         paddingBottom:10,
         marginBottom:15,
         marginLeft:30,
+      },
+      form:{
+        flex: 1,
+        marginTop:'20%',
+        justifyContent: 'center',
+        alignItems: 'center',
+
+      }, 
+      logo:{
+          marginTop:0,
+      }, 
+      container:{
+          height:'100%',
       }
 });

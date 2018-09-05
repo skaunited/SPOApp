@@ -28,7 +28,7 @@ export default class App extends React.Component {
   }
   render() {
     return (
-      <AppStackNavigator />
+        <AppStackNavigator />
     );
   }
 }
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: 'white',
   },
   welcome: {
     fontSize: 20,

@@ -2,7 +2,9 @@ import React, {Component} from "react";
 import{
     View, 
     Text,
-    StyleSheet
+    StyleSheet,
+    ImageBackground,
+    Image
 } from 'react-native';
 import {Button} from "./Button";
 import {Input} from "./Input";
@@ -40,7 +42,15 @@ export default class SignUpScreen extends React.Component{
           )
         }
         return(
+          <ImageBackground 
+          style={styles.container}
+          source={require('../img/internet.jpg')}    
+          >
           <View style = {styles.form}>
+            <Image 
+            style = {styles.logo}
+            source={require('../img/spoone.png')}
+            />
             <Input
               placeholder='Enter your FirstName...'
               label='First Name'
@@ -69,6 +79,7 @@ export default class SignUpScreen extends React.Component{
             />
             <Button onPress= {() => this.onPressSignUp()}>Sign Up</Button>
           </View>
+          </ImageBackground>
         )
     }
 
@@ -83,5 +94,14 @@ export default class SignUpScreen extends React.Component{
 
 
 const styles = StyleSheet.create({
-   
+   form:{
+    justifyContent: 'center',
+    alignItems: 'center'
+   },
+   container:{
+    height:'100%',
+   },
+   logo:{
+     marginTop:15,
+   }
 });

@@ -21,24 +21,35 @@ const styles = StyleSheet.create({
   container:{
     marginTop:10,
     width:'100%',
-    borderColor:'#eee',
-    borderBottomWidth: 2,
   },
   label:{
-    padding:5,
+    padding:10,
+    marginBottom:5,
+    marginLeft:36,
     paddingBottom: 0,
-    color: '#333',
-    fontSize:17,
+    color: '#000',
+    fontSize:13,
     fontWeight:'700',
     width:'100%',
+    paddingLeft: 15,
+    paddingRight: 15
   },
   input:{
-    paddingRight:5,
-    paddingLeft:5,
+
+    justifyContent: 'center',
+    alignItems: 'center',
+
+    borderColor:'#1B1616',
+    borderWidth:1,
+    borderRadius:3,
     paddingBottom:2,
-    color:'#333',
-    fontSize:18,
-    width:'100%',
+    color:'black',
+    fontSize:13,
+    height:39,
+    paddingLeft: 15,
+    paddingRight: 15,
+    marginLeft:50,
+    marginRight:50,
   }
 });
 
