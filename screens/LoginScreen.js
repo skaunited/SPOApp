@@ -13,8 +13,9 @@ var UserContoller = require('../controller/UserController.js');
 export default class LoginScreen extends React.Component{
     static navigationOptions = {
         title: 'Login To Your SPO Account',
-        headerStyle: { backgroundColor: 'blue' },
+        headerStyle: { backgroundColor: '#0076A4' },
         headerTitleStyle: { color: 'white' },
+        
     }
     constructor(props){
         super(props)

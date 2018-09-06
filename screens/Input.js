@@ -31,8 +31,8 @@ const styles = StyleSheet.create({
     fontSize:13,
     fontWeight:'700',
     width:'100%',
-    paddingLeft: 15,
-    paddingRight: 15
+    paddingLeft: 10,
+    paddingRight: 10,
   },
   input:{
 
@@ -46,8 +46,8 @@ const styles = StyleSheet.create({
     color:'black',
     fontSize:13,
     height:39,
-    paddingLeft: 15,
-    paddingRight: 15,
+    paddingLeft: 10,
+    paddingRight: 10,
     marginLeft:50,
     marginRight:50,
   }

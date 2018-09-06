@@ -11,9 +11,10 @@ import {Input} from "./Input";
 var UserContoller = require('../controller/UserController.js');
 export default class SignUpScreen extends React.Component{
     static navigationOptions = {
-        title: 'Create Your SPO Account',
-        headerStyle: { backgroundColor: 'blue' },
-        headerTitleStyle: { color: 'white' },
+        title: 'Create Your Free Account',
+        headerStyle: { backgroundColor: '#0076A4' },
+        headerTitleStyle: { color: 'white', fontSize:14, },
+        tintColor: {color:'white'},
       }
     constructor(props){
         super(props)
@@ -42,10 +43,6 @@ export default class SignUpScreen extends React.Component{
           )
         }
         return(
-          <ImageBackground 
-          style={styles.container}
-          source={require('../img/internet.jpg')}    
-          >
           <View style = {styles.form}>
             <Image 
             style = {styles.logo}
@@ -67,19 +64,22 @@ export default class SignUpScreen extends React.Component{
               onChangeText = {(username) => this.setState({ username })}
             />
             <Input
-              placeholder='Enter your Email...'
-              label='Email'
-              onChangeText = {(email) => this.setState({ email })}
-            />
-            <Input
               placeholder='Enter your password...'
               label='Password'
               secureTextEntry
               onChangeText = {(password) => this.setState({ password })}
             />
-            <Button onPress= {() => this.onPressSignUp()}>Sign Up</Button>
+            <Text style={styles.underIput2}>{'At least 8 characters.'}</Text>
+            <Input
+              placeholder='Enter your Email...'
+              label='Email'
+              onChangeText = {(email) => this.setState({ email })}
+            />
+            <Text style={styles.underIput}>{'An activation link will send to this email.'}</Text>
+            <Text style={styles.terms}>{' By Clicking Submit, I agree that I have read and accept the' }</Text>
+            <Text style={styles.termsandconditions}>{'Terms and Conditions.'}</Text>
+            <Button onPress= {() => this.onPressSignUp()}>SUBMIT</Button>
           </View>
-          </ImageBackground>
         )
     }
 
@@ -96,12 +96,39 @@ export default class SignUpScreen extends React.Component{
 const styles = StyleSheet.create({
    form:{
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    backgroundColor:'#FFFFFF'
    },
    container:{
     height:'100%',
    },
    logo:{
      marginTop:15,
+   },
+   underIput:{
+     fontSize:10,
+     color:'gray',
+     justifyContent:'flex-start',
+     alignItems: 'flex-start',
+     marginLeft:'-22%',
+   },
+   underIput2:{
+    fontSize:10,
+    color:'gray',
+    justifyContent:'flex-start',
+    alignItems: 'flex-start',
+    marginLeft:'-45%',
+   },
+   terms:{
+     fontSize:10,
+     color:'black',
+     paddingTop:14,
+     marginLeft:5,
+   },
+   termsandconditions:{
+     color:'blue',
+     fontSize:10,
+     marginLeft:'-45%',
+     paddingTop:14,
    }
 });
